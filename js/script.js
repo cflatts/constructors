@@ -150,7 +150,19 @@ console.assert(jasper.knowledge === 101)
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
+var Key = function() {
+}
 
+var Safe = function(inputData, newInstance) {
+    var secret = inputData
+    var keyInstance = newInstance
+
+    this.unlock = function(key) {
+        if(key === keyInstance) {
+            return secret
+        }
+    }
+}
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
