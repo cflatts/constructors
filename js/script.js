@@ -107,7 +107,15 @@ console.assert(cat.growl() === "meow");
 // student will gain. In short, make the following assertions pass:
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
+var Student = function(knowledgeArea) {
+    this.expertise = knowledgeArea
+    this.knowledge = 0
+    var stableThis = this
 
+    this.learn = function(knowledgeGained) {
+        return stableThis.knowledge += knowledgeGained
+    }
+}
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
