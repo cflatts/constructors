@@ -198,6 +198,16 @@ console.assert(safe.unlock(rightKey) === sensitive);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
+var Validator = function() {
+    Validator.prototype.email = function (inputString) {
+        for(var i = 0; i < inputString.length; i++) {
+            if(inputString[i] === '@') {
+                return true
+            }
+        }
+        return false
+    }
+}
 
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
